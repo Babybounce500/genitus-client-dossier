@@ -257,7 +257,7 @@
     secDividend.innerHTML = `
       <h2>Dividenden-Profil ${badge}</h2>
       <div class="kpi-mini-grid">
-        <div class="kpi-mini"><div class="v">${row.yieldPct?row.yieldPct.toFixed(2)+'%':'n.v.'}</div><div class="l">Cache-Rendite</div></div>
+        <div class="kpi-mini"><div class="v">${row.yieldPct && row.yieldPct<=50 ? row.yieldPct.toFixed(2)+'%' : 'n.v.'}</div><div class="l">Cache-Rendite</div></div>
         <div class="kpi-mini"><div class="v">${cagrRow?.cagr5y!=null?cagrRow.cagr5y.toFixed(1)+'%':'n.v.'}</div><div class="l">CAGR 5J</div></div>
         <div class="kpi-mini"><div class="v">${cagrRow?.cagr10y!=null?cagrRow.cagr10y.toFixed(1)+'%':'n.v.'}</div><div class="l">CAGR 10J</div></div>
         <div class="kpi-mini"><div class="v">${row.lastDivDate||'n.v.'}</div><div class="l">Letzte Zahlung</div></div>
